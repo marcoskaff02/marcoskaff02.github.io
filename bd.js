@@ -15,3 +15,14 @@ bd.transaction(function(inserir){
     );
 });
 }
+function pesquisaPorNome(){
+    const nomeUsuario = document.getElementById("pesquisa-nome-usuario").value;
+    
+    bd.transaction(function(ler){
+        ler.executeSql(`SELECT * FROM formulario WHERE nome="${nomeUsuario}"`, [], function(ler, resultados){
+            const tamanho = resultados.rows.length;
+            const msg = tamanho + "linhas encontradas";
+            console.log(msg)
+        } )
+    })
+}

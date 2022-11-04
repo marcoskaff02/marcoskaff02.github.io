@@ -6,19 +6,31 @@
     <title>MarcoSite</title>
     <script src="bd.js"></script>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <h1> Olá Mundo </h1>
-    <div>
+<body> 
+    <header>
+    <h1> Marco A.S Affonso </h1> 
+    </header>
+    <main>
+    <section>
         <h3> Conversor Celsius >> Fahrenheit</h3>
         <input type="number" placeholder="Temperatura em Celsius" id="temperatura-celsius">
         <input type="button" value="Converter!" onclick="converteParaFahrenheit()"/>
         <input id="resultado-fahrenheit" readonly >
-    </div>
-    <div>
+    </section>
+    <section>
+        <h3> Nome e Idade</h3>
         <input type="text" id="nome-usuario" placeholder="Nome"/>
         <input type="number" id="idade-usuario" placeholder="Idade"/>
         <input type="button" value="Salvar!" onclick="salvarInfo()"/>
-    </div>
+    </section>
+    <section>
+        <h3> Pesquisa BD</Pesquisa-nome></h3>
+        <input type="text" id="pesquisa-nome-usuario" placeholder="Nome"/>
+        <input type="button" value="Pesquisar" onclick="pesquisaPorNome()" />
+        <input type="text" id="resultado-pesquisa" placeholder="Resultado" readonly />
+    </section>
+    </main>
 </body>
 </html>
